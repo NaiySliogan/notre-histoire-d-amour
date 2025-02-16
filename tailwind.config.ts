@@ -26,7 +26,9 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         wedding: {
-          rose: "#FDD1D9",
+          purple: "#6E2D91",
+          green: "#4A6741",
+          lightGreen: "#8BA888",
           beige: "#F5F5F5",
           gold: "#D4AF37",
         },

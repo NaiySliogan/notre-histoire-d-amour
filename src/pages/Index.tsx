@@ -20,7 +20,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 font-light">23 Août 2025</p>
           <button
             onClick={() => setFormOpen(true)}
-            className="bg-wedding-gold text-white px-8 py-3 rounded-full text-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-wedding-gold focus:ring-opacity-50"
+            className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
           >
             Répondre
           </button>
