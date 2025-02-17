@@ -32,7 +32,7 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 offset={-64}
-                className={`cursor-pointer text-sm font-medium transition-colors hover:text-wedding-purple ${isScrolled ? "text-gray-800" : "text-white"}`}
+                className={`cursor-pointer text-sm font-medium transition-colors hover:text-wedding-purple ${isScrolled ? "text-wedding-purple" : "text-white"}`}
               >
                 {item.label}
               </Link>

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
@@ -142,13 +141,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Timeline Section with Stylized River Effect */}
       <section id="story" className="py-20 px-4 bg-gradient-to-b from-wedding-beige to-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Notre Histoire</h2>
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-wedding-purple/20" />
+            {/* Stylized Timeline River */}
+            <div 
+              className="absolute left-1/2 transform -translate-x-1/2 h-full"
+              style={{
+                width: "4px",
+                background: `linear-gradient(to bottom, 
+                  #6E2D91 0%,
+                  #8BA888 50%,
+                  #6E2D91 100%)`,
+                clipPath: "path('M2 0 C2 100 2 200 0 300 C-2 400 4 500 2 600 C0 700 2 800 2 900')",
+                filter: "blur(0.5px)",
+              }}
+            />
             
             {timeline.map((item, index) => (
               <motion.div
@@ -160,16 +170,18 @@ const Index = () => {
                   index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
               >
-                <div className="w-1/2 px-8">
-                  <div className={`text-right ${index % 2 !== 0 && "text-left"}`}>
+                <div className="w-1/2 px-4">
+                  <div className={`${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}>
                     <span className="text-wedding-purple font-medium">{item.date}</span>
                     <h3 className="font-playfair text-xl my-2">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-purple rounded-full" />
-                <div className="w-1/2 px-8">
-                  <div className="h-48 rounded-lg overflow-hidden shadow-lg">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-purple rounded-full shadow-lg z-10" />
+                <div className="w-1/2 px-4">
+                  <div className={`h-48 rounded-lg overflow-hidden shadow-lg ${
+                    index % 2 === 0 ? "ml-8" : "mr-8"
+                  }`}>
                     <img
                       src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
                       alt={item.title}
