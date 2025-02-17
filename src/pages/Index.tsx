@@ -49,7 +49,7 @@ const Index = () => {
           style={{
             backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "top center",
+            backgroundPosition: "bottom center",
             backgroundRepeat: "no-repeat",
             width: "100%",
             height: "100vh"
@@ -64,18 +64,20 @@ const Index = () => {
           >
             <span className="text-white/90 text-lg mb-2 block">Bienvenue sur notre site de mariage</span>
             <div className="flex flex-col gap-2 mb-4">
-              <h1 className="font-playfair text-5xl md:text-7xl text-left text-white">Juliette</h1>
-              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">&amp; Florian</h1>
+              <h1 className="font-playfair text-5xl md:text-7xl text-left text-white">Juliette &amp;</h1>
+              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">Florian</h1>
             </div>
-            <p className="text-xl md:text-2xl mb-8 font-light text-white">23 Août 2025</p>
-            <a
-              href="https://forms.google.com/..."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
-            >
-              Répondre
-            </a>
+            <div className="flex flex-col items-center mt-8">
+              <p className="text-xl md:text-2xl mb-6 font-light text-white">23 Août 2025</p>
+              <a
+                href="https://forms.google.com/..."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
+              >
+                Répondre
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -155,7 +157,7 @@ const Index = () => {
             <div 
               className="absolute left-1/2 transform -translate-x-1/2 h-full"
               style={{
-                width: "4px",
+                width: "1px",
                 background: `linear-gradient(to bottom, 
                   #6E2D91 0%,
                   #8BA888 50%,
