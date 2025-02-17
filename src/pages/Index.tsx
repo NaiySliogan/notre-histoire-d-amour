@@ -1,179 +1,245 @@
 
-import { useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Heart, Calendar, MapPin, Users } from "lucide-react";
+import { MapPin } from "lucide-react";
+import Navigation from "../components/Navigation";
+
+const locations = {
+  eglise: {
+    name: "Église Saint-Pierre",
+    address: "1 rue de l'Église, 75001 Paris",
+    mapsUrl: "https://maps.google.com/?q=1+rue+de+l'Église+75001+Paris"
+  },
+  chateau: {
+    name: "Château de l'Amour",
+    address: "1 rue du Château, 75001 Paris",
+    mapsUrl: "https://maps.google.com/?q=1+rue+du+Château+75001+Paris"
+  }
+};
+
+const schedule = [
+  { time: "14h30", event: "Cérémonie religieuse", location: "eglise" },
+  { time: "16h00", event: "Arrivée au château", location: "chateau" },
+  { time: "16h30", event: "Vin d'honneur", location: "chateau" },
+  { time: "19h00", event: "Dîner", location: "chateau" },
+  { time: "21h30", event: "Soirée dansante", location: "chateau" }
+];
+
+const timeline = [
+  { date: "Juin 2020", title: "Notre rencontre", description: "Sur une plage de Tahiti..." },
+  { date: "Août 2022", title: "Nos fiançailles", description: "Sous les étoiles..." },
+  { date: "23 Août 2025", title: "Notre mariage", description: "Le grand jour !" }
+];
 
 const Index = () => {
-  const [formOpen, setFormOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.height = "100%";
+    return () => {
+      document.body.style.height = "auto";
+    };
+  }, []);
 
   return (
-    <div className="min-h-screen bg-wedding-beige">
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative p-4 bg-gradient-to-b from-wedding-rose/20 to-transparent">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <h1 className="font-playfair text-5xl md:text-7xl mb-4">Marie & Thomas</h1>
-          <p className="text-xl md:text-2xl mb-8 font-light">23 Août 2025</p>
-          <button
-            onClick={() => setFormOpen(true)}
-            className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
+    <div className="min-h-screen">
+      <Navigation />
+      
+      {/* Hero Section with Background Image */}
+      <section id="home" className="min-h-screen flex flex-col items-start justify-center relative px-8 md:px-16">
+        <div 
+          className="absolute inset-0 z-0" 
+          style={{
+            backgroundImage: "url('/lovable-uploads/95f6d05e-2dd7-48e5-b083-f518d75afc4c.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+        <div className="absolute inset-0 bg-black/30 z-10" /> {/* Overlay for better text visibility */}
+        <div className="relative z-20 max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            Répondre
-          </button>
-        </motion.div>
+            <span className="text-white/90 text-lg mb-2 block">Bienvenue sur notre site de mariage</span>
+            <h1 className="font-playfair text-5xl md:text-7xl mb-4 text-white">Juliette & Florian</h1>
+            <p className="text-xl md:text-2xl mb-8 font-light text-white">23 Août 2025</p>
+            <a
+              href="https://forms.google.com/..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
+            >
+              Répondre
+            </a>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Details Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Location Section */}
+      <section className="py-20 px-4 bg-wedding-beige">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center p-6"
           >
-            <Calendar className="w-12 h-12 mx-auto mb-4 text-wedding-gold" />
-            <h3 className="font-playfair text-xl mb-2">La Date</h3>
-            <p>23 Août 2025</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center p-6"
-          >
-            <MapPin className="w-12 h-12 mx-auto mb-4 text-wedding-gold" />
-            <h3 className="font-playfair text-xl mb-2">Le Lieu</h3>
-            <p>Château de l'Amour</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-center p-6"
-          >
-            <Users className="w-12 h-12 mx-auto mb-4 text-wedding-gold" />
-            <h3 className="font-playfair text-xl mb-2">Les Invités</h3>
-            <p>Nous attendons votre réponse</p>
+            <MapPin className="w-12 h-12 mx-auto mb-4 text-wedding-purple" />
+            <h3 className="font-playfair text-2xl mb-4">Les Lieux</h3>
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              {Object.entries(locations).map(([key, loc]) => (
+                <div key={key} className="text-center">
+                  <h4 className="font-playfair text-xl mb-2">{loc.name}</h4>
+                  <p className="mb-4">{loc.address}</p>
+                  <a
+                    href={loc.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-wedding-purple hover:text-wedding-green transition-colors"
+                  >
+                    Voir sur Google Maps
+                  </a>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Notre Histoire Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="font-playfair text-4xl md:text-5xl text-center mb-16"
-          >
-            Notre Histoire
-          </motion.h2>
-          <div className="space-y-16">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row items-center gap-8"
-            >
-              <div className="w-full md:w-1/2">
-                <img
-                  src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
-                  alt="Notre rencontre"
-                  className="rounded-lg shadow-lg w-full h-[300px] object-cover"
-                />
-              </div>
-              <div className="w-full md:w-1/2">
-                <h3 className="font-playfair text-2xl mb-4">Notre Rencontre</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  C'était un jour comme les autres, jusqu'à ce que nos chemins se croisent...
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row-reverse items-center gap-8"
-            >
-              <div className="w-full md:w-1/2">
-                <img
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-                  alt="La demande"
-                  className="rounded-lg shadow-lg w-full h-[300px] object-cover"
-                />
-              </div>
-              <div className="w-full md:w-1/2">
-                <h3 className="font-playfair text-2xl mb-4">La Demande</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Un moment magique que nous n'oublierons jamais...
-                </p>
-              </div>
-            </motion.div>
+      {/* Schedule Section */}
+      <section id="schedule" className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl text-center font-playfair mb-12">
+            Nous sommes impatients de célébrer notre amour avec vous
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                alt="Célébration"
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              {schedule.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <span className="text-wedding-purple font-medium">{item.time}</span>
+                  <div>
+                    <h4 className="font-playfair">{item.event}</h4>
+                    <p className="text-sm text-gray-600">{locations[item.location].name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* RSVP Form Modal */}
-      {formOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-lg p-8 max-w-md w-full relative"
-          >
-            <button
-              onClick={() => setFormOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              ×
-            </button>
-            <h3 className="font-playfair text-2xl mb-6 text-center">Votre Réponse</h3>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Votre nom
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-wedding-gold focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre de personnes
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-wedding-gold focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Besoin d'hébergement ?
-                </label>
-                <select className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-wedding-gold focus:border-transparent">
-                  <option value="">Sélectionnez une option</option>
-                  <option value="oui">Oui</option>
-                  <option value="non">Non</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-wedding-gold text-white py-3 rounded-md hover:bg-opacity-90 transition-colors"
+      {/* Timeline Section */}
+      <section id="story" className="py-20 px-4 bg-gradient-to-b from-wedding-beige to-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Notre Histoire</h2>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-wedding-purple/20" />
+            
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className={`flex items-center mb-12 ${
+                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                }`}
               >
-                Envoyer
-              </button>
-            </form>
-          </motion.div>
+                <div className="w-1/2 px-8">
+                  <div className={`text-right ${index % 2 !== 0 && "text-left"}`}>
+                    <span className="text-wedding-purple font-medium">{item.date}</span>
+                    <h3 className="font-playfair text-xl my-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-purple rounded-full" />
+                <div className="w-1/2 px-8">
+                  <div className="h-48 rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      )}
+      </section>
+
+      {/* Accommodation Section */}
+      <section id="accommodation" className="py-20 px-4 bg-wedding-lightGreen/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Votre Séjour</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                alt="Gîte"
+                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+              />
+            </div>
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-playfair text-2xl mb-4">Le Gîte</h3>
+                <p className="text-gray-600">Description du gîte et informations pratiques...</p>
+              </div>
+              <div>
+                <h3 className="font-playfair text-2xl mb-4">Autres Hébergements</h3>
+                <p className="text-gray-600">Liste des hôtels et chambres d'hôtes à proximité...</p>
+              </div>
+              <div>
+                <h3 className="font-playfair text-2xl mb-4">Activités</h3>
+                <p className="text-gray-600">Découvrez les activités de la région...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photos Section */}
+      <section id="photos" className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-playfair mb-8">Vos Photos</h2>
+          <p className="mb-8">Partagez vos moments préférés de notre journée</p>
+          <a
+            href="https://photos-site.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-wedding-purple text-white px-8 py-3 rounded-full inline-block transition-transform hover:scale-105 hover:bg-opacity-90"
+          >
+            Accéder à la galerie
+          </a>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-12 px-4 bg-wedding-beige">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl font-playfair mb-8">Contact</h2>
+          <div className="space-y-2">
+            <p>Juliette: 06 XX XX XX XX</p>
+            <p>Florian: 06 XX XX XX XX</p>
+            <p>Email: juliette.et.florian@email.com</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
