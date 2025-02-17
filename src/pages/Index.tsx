@@ -45,15 +45,17 @@ const Index = () => {
       {/* Hero Section with Background Image */}
       <section id="home" className="min-h-screen flex flex-col items-start justify-center relative px-8 md:px-16">
         <div 
-          className="absolute inset-0 z-0" 
+          className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(/home_page.jpg)`,
+            backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
+            width: "100%",
+            height: "100vh"
           }}
         />
-        <div className="absolute inset-0 bg-black/30 z-10" /> {/* Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/30 z-10" />
         <div className="relative z-20 max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,22 +143,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Timeline Section with Stylized River Effect */}
-      <section id="story" className="py-20 px-4 bg-gradient-to-b from-wedding-beige to-white">
+      {/* Timeline Section with Enhanced Wave Effect */}
+      <section id="story" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Notre Histoire</h2>
           <div className="relative">
-            {/* Stylized Timeline River */}
+            {/* Stylized Timeline River with Enhanced Wave Effect */}
             <div 
               className="absolute left-1/2 transform -translate-x-1/2 h-full"
               style={{
-                width: "4px",
+                width: "6px",
                 background: `linear-gradient(to bottom, 
                   #6E2D91 0%,
                   #8BA888 50%,
                   #6E2D91 100%)`,
-                clipPath: "path('M2 0 C2 100 2 200 0 300 C-2 400 4 500 2 600 C0 700 2 800 2 900')",
-                filter: "blur(0.5px)",
+                clipPath: `path('M3 0 
+                  C 20 100, -15 200, 3 300
+                  C -15 400, 20 500, 3 600
+                  C 20 700, -15 800, 3 900
+                  C -15 1000, 20 1100, 3 1200')`,
+                filter: "blur(0.7px)",
+              }}
+            />
+            
+            {/* Points de connexion avec effet brillant */}
+            <div 
+              className="absolute left-1/2 transform -translate-x-1/2 h-full w-12"
+              style={{
+                background: "radial-gradient(circle at center, rgba(110,45,145,0.1) 0%, transparent 70%)",
+                filter: "blur(2px)",
               }}
             />
             

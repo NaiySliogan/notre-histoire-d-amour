@@ -12,6 +12,14 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair text-wedding-purple;
   }
+
+  section:nth-of-type(odd) {
+    background-color: #F2FCE2; /* Vert très pâle */
+  }
+
+  section:nth-of-type(even) {
+    background-color: #FFDEE2; /* Rose très pâle */
+  }
 }
 
 .smooth-scroll {
