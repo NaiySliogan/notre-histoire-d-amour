@@ -14,11 +14,11 @@
   }
 
   section:nth-of-type(odd) {
-    background-color: #F2FCE2; /* Vert très pâle */
+    background-color: #F8FEF3; /* Vert très très pâle */
   }
 
   section:nth-of-type(even) {
-    background-color: #FFDEE2; /* Rose très pâle */
+    background-color: #FFF2F4; /* Rose très très pâle */
   }
 }
 

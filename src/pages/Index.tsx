@@ -49,21 +49,24 @@ const Index = () => {
           style={{
             backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "top center",
             backgroundRepeat: "no-repeat",
             width: "100%",
             height: "100vh"
           }}
         />
         <div className="absolute inset-0 bg-black/30 z-10" />
-        <div className="relative z-20 max-w-2xl">
+        <div className="relative z-20 w-1/3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <span className="text-white/90 text-lg mb-2 block">Bienvenue sur notre site de mariage</span>
-            <h1 className="font-playfair text-5xl md:text-7xl mb-4 text-white">Juliette & Florian</h1>
+            <div className="flex flex-col gap-2 mb-4">
+              <h1 className="font-playfair text-5xl md:text-7xl text-left text-white">Juliette</h1>
+              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">&amp; Florian</h1>
+            </div>
             <p className="text-xl md:text-2xl mb-8 font-light text-white">23 Août 2025</p>
             <a
               href="https://forms.google.com/..."
@@ -143,35 +146,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Timeline Section with Enhanced Wave Effect */}
+      {/* Timeline Section */}
       <section id="story" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Notre Histoire</h2>
           <div className="relative">
-            {/* Stylized Timeline River with Enhanced Wave Effect */}
+            {/* Stylized Timeline with ZigZag */}
             <div 
               className="absolute left-1/2 transform -translate-x-1/2 h-full"
               style={{
-                width: "6px",
+                width: "4px",
                 background: `linear-gradient(to bottom, 
                   #6E2D91 0%,
                   #8BA888 50%,
                   #6E2D91 100%)`,
-                clipPath: `path('M3 0 
-                  C 20 100, -15 200, 3 300
-                  C -15 400, 20 500, 3 600
-                  C 20 700, -15 800, 3 900
-                  C -15 1000, 20 1100, 3 1200')`,
-                filter: "blur(0.7px)",
-              }}
-            />
-            
-            {/* Points de connexion avec effet brillant */}
-            <div 
-              className="absolute left-1/2 transform -translate-x-1/2 h-full w-12"
-              style={{
-                background: "radial-gradient(circle at center, rgba(110,45,145,0.1) 0%, transparent 70%)",
-                filter: "blur(2px)",
+                clipPath: `path('M2 0 
+                  C 15 100, -10 200, 15 300 
+                  C -10 400, 15 500, -10 600 
+                  C 15 700, -10 800, 15 900')`,
+                filter: "blur(0.5px)",
               }}
             />
             
