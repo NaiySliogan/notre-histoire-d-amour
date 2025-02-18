@@ -114,6 +114,37 @@ const Index = () => {
         </div>
       </section>
 
+       {/* Location Section */}
+       <section className="py-20 px-4 bg-wedding-beige">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center p-6"
+          >
+            <MapPin className="w-12 h-12 mx-auto mb-4 text-wedding-purple" />
+            <h3 className="font-playfair text-2xl mb-4">Les Lieux</h3>
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              {Object.entries(locations).map(([key, loc]) => (
+                <div key={key} className="text-center">
+                  <h4 className="font-playfair text-xl mb-2">{loc.name}</h4>
+                  <p className="mb-4">{loc.address}</p>
+                  <a
+                    href={loc.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-wedding-purple hover:text-wedding-green transition-colors"
+                  >
+                    Voir sur Google Maps
+                  </a>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Schedule Section avec les émojis violets */}
       <section id="schedule" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -121,6 +152,13 @@ const Index = () => {
             Nous sommes impatients de célébrer notre amour avec vous
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                alt="Célébration"
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
             <div className="space-y-6">
               {schedule.map((item, index) => (
                 <motion.div
@@ -225,14 +263,7 @@ const Index = () => {
       <section id="accommodation" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Votre Séjour</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
-                alt="Gîte"
-                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
-              />
-            </div>
+ 
             <div className="space-y-8">
               <div>
                 <h3 className="font-playfair text-2xl mb-4">Les Gîtes</h3>
@@ -246,6 +277,13 @@ const Index = () => {
                   La nuit coûte 40€ par personne (lit bébé non compté)
                 </p>
               </div>
+              <div>
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                alt="Gîte"
+                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+              />
+            </div>
               <div>
                 <h3 className="font-playfair text-2xl mb-4">Hébergements en Dordogne</h3>
                 <p className="text-sm text-gray-500 mb-4">à réserver et contacter par vos soins si vous les préférez au gîte</p>
@@ -301,7 +339,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
