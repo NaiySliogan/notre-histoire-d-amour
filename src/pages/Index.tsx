@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import Navigation from "../components/Navigation";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const locations = {
   eglise: {
@@ -28,10 +29,10 @@ const schedule = [
 const timeline = [
   { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers" },
   { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire" },
-  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage et découverte de Minorque" },
+  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque" },
   { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti" },
   { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles" },
-  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du bébé Tia dans notre vie" },
+  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du chaton Tia dans notre vie" },
   { date: "23 Août 2025", title: "Notre mariage", description: "Notre grand jour avec vous ❤️" }
 ];
 
@@ -60,6 +61,8 @@ const activities = {
 };
 
 const Index = () => {
+  const isMobile = useIsMobile()
+
   useEffect(() => {
     document.body.style.height = "100%";
     return () => {
@@ -78,17 +81,14 @@ const Index = () => {
           style={{
             backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "top center",
+            backgroundPosition:  "bottom center",
             backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "100vh",
-            '@media (max-width: 768px)': {
-              transform: 'translateX(10%)'
-            }
+            height: "100vh"
           }}
         />
         <div className="absolute inset-0 bg-black/30 z-10" />
-        <div className="relative z-20 w-1/3 md:w-1/3 ml-auto">
+        <div className={`relative z-20 ${isMobile ? '' : 'w-1/3'}`}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,8 +96,8 @@ const Index = () => {
           >
             <span className="text-white/90 text-lg mb-2 block">Bienvenue sur notre site de mariage</span>
             <div className="flex flex-col gap-2 mb-4">
-              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">Juliette</h1>
-              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">&amp; Florian</h1>
+              <h1 className="font-playfair text-5xl md:text-7xl text-left text-white">Juliette &amp;</h1>
+              <h1 className="font-playfair text-5xl md:text-7xl text-right text-white">Florian</h1>
             </div>
             <div className="flex flex-col items-center mt-8">
               <p className="text-xl md:text-2xl mb-6 font-light text-white">23 Août 2025</p>
@@ -243,7 +243,7 @@ const Index = () => {
                   <br /><br />
                   La plupart des chambres ont leur propre salle de bain (certaines sont partagées). Cuisines partagées.
                   <br /><br />
-                  La nuit coûte 40€ par personnes (lit bébé non compté)
+                  La nuit coûte 40€ par personne (lit bébé non compté)
                 </p>
               </div>
               <div>
