@@ -20,7 +20,8 @@ const Navigation = () => {
           <div className="hidden md:flex space-x-8">
             {[
               { to: "home", label: "Accueil" },
-              { to: "schedule", label: "Déroulement" },
+              { to: "theme", label: "Thème & Dress Code" },
+              { to: "schedule", label: "Le jour J" },
               { to: "story", label: "Notre Histoire" },
               { to: "accommodation", label: "Votre Séjour" },
               { to: "photos", label: "Vos Photos" },
