@@ -27,13 +27,13 @@ const schedule = [
 ];
 
 const timeline = [
-  { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers", picture: "public/camping_angers.jpg" },
-  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire", picture: "public/mise_en_couple.jpg" },
-  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque", picture: "public/minorque_plongée.jpg" },
-  { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti", picture: "public/moorea_chapeau.jpeg" },
-  { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles", picture: "public/mains.jpg" },
-  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du chaton Tia dans notre vie", picture: "public/tia.jpg" },
-  { date: "23 Août 2025", title: "Notre mariage", description: "Notre grand jour avec vous ❤️", picture: "public/minorque_plage.jpg" }
+  { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers", picture: "camping_angers.jpg" },
+  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire", picture: "mise_en_couple.jpg" },
+  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque", picture: "minorque_plongée.jpg" },
+  { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti", picture: "moorea_chapeau.jpeg" },
+  { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles", picture: "mains.jpg" },
+  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du chaton Tia dans notre vie", picture: "tia.jpg" },
+  { date: "23 Août 2025", title: "Notre mariage", description: "Notre grand jour avec vous ❤️", picture: "minorque_plage.jpg" }
 ];
 
 const accommodations = [
@@ -155,7 +155,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="public/chateau_2.jpg"
+                src="chateau_2.jpg"
                 alt="Célébration"
                 className="w-full h-[400px] object-cover"
               />
@@ -280,7 +280,7 @@ const Index = () => {
               </div>
               <div>
               <img
-                src="public/chateau_panorama.jpg"
+                src="chateau_panorama.jpg"
                 alt="Gîte"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
               />
