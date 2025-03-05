@@ -82,7 +82,7 @@ const Index = () => {
           style={{
             backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: isMobile ? "calc(50% + 50px) center" : "bottom center",
+            backgroundPosition: "bottom center",
             backgroundRepeat: "no-repeat",
             width: "100%",
             height: "100vh"
@@ -250,7 +250,7 @@ const Index = () => {
                     <img
                       src={item.picture}
                       alt={item.title}
-                      className="w-full h-auto max-h-48 object-contain"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
                 </div>
