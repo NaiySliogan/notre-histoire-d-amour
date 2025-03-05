@@ -271,11 +271,13 @@ const Index = () => {
                 <p className="text-gray-600">
                   Trois gîtes juste à côté du château dans un esprit mini village, meublé ancien charmant.
                   <br /><br />
-                  Chambre doubles pour des couples ou chambre de 3 ou 4 pour des familles (lit double + lit simple). Une chambre de 5 dispo aussi.
+                 Les gites ont des chambres pour deux personnes ou plus. Les chambres pour 2 personnes utilisent un lit double et celles pour 3 un lit double et un lit simple. 
+                 La plupart des chambres sont pour 2 ou 3 et la plus grande pour 5. 
+                 Il y a aussi la possibilité de mettre un lit bébé.
                   <br /><br />
                   La plupart des chambres ont leur propre salle de bain (certaines sont partagées). Cuisines partagées.
                   <br /><br />
-                  La nuit coûte 40€ par personne (lit bébé non compté)
+                  La nuit coûte 40€ par personne.
                 </p>
               </div>
               <div>
