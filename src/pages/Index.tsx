@@ -82,7 +82,7 @@ const Index = () => {
           style={{
             backgroundImage: "url(home_page.jpg)",
             backgroundSize: "cover",
-            backgroundPosition:  "bottom center",
+            backgroundPosition: isMobile ? "calc(50% + 50px) center" : "bottom center",
             backgroundRepeat: "no-repeat",
             width: "100%",
             height: "100vh"
@@ -157,7 +157,7 @@ const Index = () => {
               <img
                 src="chateau_2.jpg"
                 alt="Célébration"
-                className="w-full h-[400px] object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div className="space-y-6">
@@ -244,13 +244,13 @@ const Index = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-purple rounded-full shadow-lg z-10" />
                 <div className="w-1/2 px-4">
-                  <div className={`h-48 rounded-lg overflow-hidden shadow-lg ${
+                  <div className={`rounded-lg overflow-hidden shadow-lg ${
                     index % 2 === 0 ? "ml-8" : "mr-8"
                   }`}>
                     <img
                       src={item.picture}
                       alt={item.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto max-h-48 object-contain"
                     />
                   </div>
                 </div>
@@ -282,7 +282,7 @@ const Index = () => {
               <img
                 src="chateau_panorama.jpg"
                 alt="Gîte"
-                className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                className="rounded-lg shadow-lg w-full h-auto max-h-[400px] object-contain"
               />
             </div>
               <div>

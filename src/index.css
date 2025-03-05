@@ -20,6 +20,12 @@
   section:nth-of-type(even) {
     background-color: #FFF2F4; /* Rose très très pâle */
   }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .smooth-scroll {
