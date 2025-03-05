@@ -6,14 +6,14 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const locations = {
   eglise: {
-    name: "Église Saint-Pierre",
-    address: "1 rue de l'Église, 75001 Paris",
-    mapsUrl: "https://maps.google.com/?q=1+rue+de+l'Église+75001+Paris"
+    name: "Église Saint-Etienne",
+    address: "Place de l'Église, 24330 Bassillac et Auberoche",
+    mapsUrl: "https://maps.app.goo.gl/F5nubDWzE6qTck8y6"
   },
   chateau: {
-    name: "Château de l'Amour",
-    address: "1 rue du Château, 75001 Paris",
-    mapsUrl: "https://maps.google.com/?q=1+rue+du+Château+75001+Paris"
+    name: "Château de Château-l'Evêque",
+    address: "14 Rue du Château, 24460 Château-l'Évêque",
+    mapsUrl: "https://maps.app.goo.gl/UocvxkEcteWjVj9n6"
   }
 };
 
@@ -27,36 +27,37 @@ const schedule = [
 ];
 
 const timeline = [
-  { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers" },
-  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire" },
-  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque" },
-  { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti" },
-  { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles" },
-  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du chaton Tia dans notre vie" },
-  { date: "23 Août 2025", title: "Notre mariage", description: "Notre grand jour avec vous ❤️" }
+  { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers", picture: "public/camping_angers.jpg" },
+  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire", picture: "public/mise_en_couple.jpg" },
+  { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque", picture: "public/minorque_plongée.jpg" },
+  { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti", picture: "public/moorea_chapeau.jpeg" },
+  { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles", picture: "public/mains.jpg" },
+  { date: "Juin 2024", title: "Notre plus beau cadeau", description: "Arrivée surprise du chaton Tia dans notre vie", picture: "public/tia.jpg" },
+  { date: "23 Août 2025", title: "Notre mariage", description: "Notre grand jour avec vous ❤️", picture: "public/minorque_plage.jpg" }
 ];
 
 const accommodations = [
-  { name: "Couvent Saint Vincent", distance: "à 18km de Bassillac et 600m du Château", url: "https://couventstvincent.fr" },
-  { name: "Camping Au Fil de l'Eau", distance: "à 5km de Bassillac et 22km du château", url: "https://campingaufil.fr" },
-  { name: "La Forêt Enchantée", distance: "à 8km de Bassillac et 13km du château", url: "https://foretenchantee.fr" },
-  { name: "Village Huttopia Lanmary", distance: "à 10km de Bassillac et 16km du château", url: "https://huttopia.fr" },
-  { name: "Hôtel Ibis Budget", distance: "Périgueux", url: "https://ibis.fr" },
-  { name: "Hôtel Bristol", distance: "Périgueux", url: "https://bristol-hotel.fr" }
+  { name: "Couvent Saint Vincent", distance: "à 18km de Bassillac et 600m du Château", url: "" },
+  { name: "Camping Au Fil de l'Eau", distance: "à 5km de Bassillac et 22km du château", url: "https://maps.app.goo.gl/bKzwZHpw7rTd4CxD9" },
+  { name: "La Forêt Enchantée", distance: "à 8km de Bassillac et 13km du château", url: "https://maps.app.goo.gl/fbX32no7omWEffR76" },
+  { name: "Village Huttopia Lanmary", distance: "à 10km de Bassillac et 16km du château", url: "https://maps.app.goo.gl/b76umQXVuRboJS87A" },
+  { name: "Hôtel Ibis Budget", distance: "Périgueux Centre", url: "https://maps.app.goo.gl/swiyRMpEzKiHbD3J7" },
+  { name: "Hôtel Ibis Budget", distance: "Périgueux Boulazac", url: "https://maps.app.goo.gl/MkqRmDq6ugc8HLzS7" },
+  { name: "Hôtel Bristol", distance: "Périgueux", url: "https://maps.app.goo.gl/8xGv9sqFX2P2rwXq9" }
 ];
 
 const activities = {
   mustSee: [
-    { name: "Grottes de Lascaux", url: "https://lascaux.fr" },
-    { name: "Château de Castelnau", url: "https://chateau-castelnau.fr" },
-    { name: "Promenade en canoë sur la Dordogne et la Vézère", url: "#" }
+    { name: "Grottes de Lascaux", url: "https://maps.app.goo.gl/js6k2KrHZL24FAci6" },
+    { name: "Château de Castelnau", url: "" },
+    { name: "Promenade en canoë sur la Dordogne et la Vézère", url: "" }
   ],
   others: [
-    { name: "Château et jardins des Milandes", url: "https://milandes.fr" },
-    { name: "Rocher des Aigles et Parc Durandal à Rocamadour", url: "#" },
-    { name: "Gouffre de Proumeyssac", url: "#" },
-    { name: "Randonnées en VTT", url: "#" },
-    { name: "Le château escape-game de Marzac", url: "#" }
+    { name: "Château et jardins des Milandes", url: "" },
+    { name: "Rocher des Aigles et Parc Durandal à Rocamadour", url: "" },
+    { name: "Gouffre de Proumeyssac", url: "" },
+    { name: "Randonnées en VTT", url: "" },
+    { name: "Le château escape-game de Marzac", url: "" }
   ]
 };
 
@@ -102,7 +103,7 @@ const Index = () => {
             <div className="flex flex-col items-center mt-8">
               <p className="text-xl md:text-2xl mb-6 font-light text-white">23 Août 2025</p>
               <a
-                href="https://forms.google.com/..."
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfa3n8mV89eRFEX9XKDAhPDwDNdIvZK1ziLzSG7W1bCqRefOA/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
@@ -154,7 +155,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                src="public/chateau_2.jpg"
                 alt="Célébration"
                 className="w-full h-[400px] object-cover"
               />
@@ -247,7 +248,7 @@ const Index = () => {
                     index % 2 === 0 ? "ml-8" : "mr-8"
                   }`}>
                     <img
-                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                      src={item.picture}
                       alt={item.title}
                       className="w-full h-full object-cover"
                     />
@@ -279,7 +280,7 @@ const Index = () => {
               </div>
               <div>
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                src="public/chateau_panorama.jpg"
                 alt="Gîte"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
               />
@@ -349,7 +350,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-playfair mb-8">Vos Photos</h2>
           <p className="mb-8">Partagez vos moments préférés de notre journée</p>
           <a
-            href="https://photos-site.com"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="bg-wedding-purple text-white px-8 py-3 rounded-full inline-block transition-transform hover:scale-105 hover:bg-opacity-90"
