@@ -28,7 +28,7 @@ const schedule = [
 
 const timeline = [
   { date: "Septembre 2019", title: "Notre rencontre", description: "à l'école d'Angers", picture: "camping_angers.jpg" },
-  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire", picture: "mise_en_couple.jpg" },
+  { date: "8 septembre 2020", title: "Déclaration d'amour", description: "Le début de notre belle histoire", picture: "prairies.jpeg" },
   { date: "Mai 2021", title: "Premier voyage ensemble", description: "Stage de plongée à Minorque", picture: "minorque_plongée.jpg" },
   { date: "Avril 2023", title: "Notre départ", description: "On s'installe à Tahiti", picture: "moorea_chapeau.jpeg" },
   { date: "16 janvier 2024", title: "Nos fiançailles", description: "Demande en Mariage sur l'île de Rangiroa sous les étoiles", picture: "mains.jpg" },
@@ -37,7 +37,6 @@ const timeline = [
 ];
 
 const accommodations = [
-  { name: "Couvent Saint Vincent", distance: "à 18km de Bassillac et 600m du Château", url: "" },
   { name: "Camping Au Fil de l'Eau", distance: "à 5km de Bassillac et 22km du château", url: "https://maps.app.goo.gl/bKzwZHpw7rTd4CxD9" },
   { name: "La Forêt Enchantée", distance: "à 8km de Bassillac et 13km du château", url: "https://maps.app.goo.gl/fbX32no7omWEffR76" },
   { name: "Village Huttopia Lanmary", distance: "à 10km de Bassillac et 16km du château", url: "https://maps.app.goo.gl/b76umQXVuRboJS87A" },
@@ -49,15 +48,14 @@ const accommodations = [
 const activities = {
   mustSee: [
     { name: "Grottes de Lascaux", url: "https://maps.app.goo.gl/js6k2KrHZL24FAci6" },
-    { name: "Château de Castelnau", url: "" },
-    { name: "Promenade en canoë sur la Dordogne et la Vézère", url: "" }
+    { name: "Château de Castelnaud", url: "https://maps.app.goo.gl/tmkd2rJA4JKmgwqh7" },
+    { name: "Rocher des Aigles et Parc Durandal à Rocamadour", url: "https://maps.app.goo.gl/VFzkJy68qCGwCBGH6" },
+    { name: "Gouffre de Proumeyssac", url: "https://maps.app.goo.gl/TCPnLcYSbLfGL5NN9" },
+    { name: "Le château escape-game de Marzac", url: "https://maps.app.goo.gl/qzbUhmbXhk8uhVA47" }
   ],
   others: [
-    { name: "Château et jardins des Milandes", url: "" },
-    { name: "Rocher des Aigles et Parc Durandal à Rocamadour", url: "" },
-    { name: "Gouffre de Proumeyssac", url: "" },
-    { name: "Randonnées en VTT", url: "" },
-    { name: "Le château escape-game de Marzac", url: "" }
+    { name: "Randonnées en VTT ou à pieds" },
+    { name: "Promenade en canoë sur la Dordogne et la Vézère" }
   ]
 };
 
@@ -228,9 +226,9 @@ const Index = () => {
             {timeline.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? 80 : -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05, duration: 0.6 }}
                 className={`flex items-center mb-12 ${
                   index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
@@ -243,14 +241,14 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-purple rounded-full shadow-lg z-10" />
-                <div className="w-1/2 px-4">
-                  <div className={`rounded-lg overflow-hidden shadow-lg ${
+                <div className="flex justify-center w-1/2 px-4">
+                  <div className={`w-fit rounded-lg overflow-hidden shadow-lg ${
                     index % 2 === 0 ? "ml-8" : "mr-8"
                   }`}>
                     <img
                       src={item.picture}
                       alt={item.title}
-                      className="w-full h-auto object-contain"
+                      className="w-auto h-auto max-h-[485px] object-contain"
                     />
                   </div>
                 </div>
@@ -309,7 +307,6 @@ const Index = () => {
                 <h3 className="font-playfair text-2xl mb-4">Activités</h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-playfair text-xl mb-4 text-wedding-purple">Les Incontournables</h4>
                     <div className="grid grid-cols-2 gap-4">
                       {activities.mustSee.map((activity, index) => (
                         <a
@@ -322,21 +319,14 @@ const Index = () => {
                           <span className="font-medium text-wedding-purple">{activity.name}</span>
                         </a>
                       ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-playfair text-lg mb-4">Autres Activités</h4>
-                    <div className="grid grid-cols-2 gap-4">
                       {activities.others.map((activity, index) => (
-                        <a
+                        <div
                           key={index}
-                          href={activity.url}
-                          target="_blank"
                           rel="noopener noreferrer"
-                          className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                          className="p-4 bg-white rounded-lg shadow-sm transition-shadow"
                         >
                           <span className="text-gray-700">{activity.name}</span>
-                        </a>
+                        </div>
                       ))}
                     </div>
                   </div>
