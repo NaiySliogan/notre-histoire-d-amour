@@ -357,9 +357,11 @@ const Index = () => {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-playfair mb-8">Contact</h2>
           <div className="space-y-2">
-            <p>Juliette: 06 XX XX XX XX</p>
-            <p>Florian: 06 XX XX XX XX</p>
-            <p>Email: juliette.et.florian@email.com</p>
+            <h4 className="font-playfair">Juliette</h4>
+            <p>06 99 38 53 82</p>
+            <p>juliet.lacroix@gmail.com</p>
+            <h4 className="font-playfair">Florian</h4>
+            <p>florian.haritonoff@gmail.com</p>
           </div>
         </div>
       </section>
