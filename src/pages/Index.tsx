@@ -188,9 +188,12 @@ const Index = () => {
             <span style={{ color: '#6E2D91' }}>✨</span> Dress code – Magie en forêt <span style={{ color: '#6E2D91' }}>✨</span>
           </h2>
           <div className="text-[#BE01AE] space-y-4 mb-8">
-            <p>Plongez avec nous dans un univers enchanté, où la nature danse avec les étoiles. <span style={{ color: '#6E2D91' }}>🌿✨</span></p>
-            <p>Osez les couleurs vibrantes et les étoffes féeriques : des teintes de violet profond, de vert mystique et des touches dorées scintillantes. Laissez-vous inspirer par les fleurs sauvages, les feuillages enchantés et la lumière des astres.</p>
-            
+            <p>Plongez avec nous dans un univers enchanté, où la nature danse avec les étoiles. 🌿✨</p>
+            <p>Osez les couleurs vibrantes et les étoffes féeriques : des teintes de violet profond, de vert mystique et des touches de dorées scintillantes. Laissez-vous inspirer par les fleurs sauvages et les feuillages.
+Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes élégants, accessoires étoilés ou floraux… Exprimez votre éclat, sans crainte d'apporter une touche d'émerveillement à cette célébration !
+✨</p>
+<p>Simple élégance, magie enchantée ou féerie assumée, soyez qui vous voulez mais le blanc est déjà réservé ! ✨</p>
+
             {/* Mood Board */}
             <div className="my-12 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-wedding-purple/20 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,7 +204,7 @@ const Index = () => {
                     className="relative overflow-hidden rounded-lg shadow-xl"
                   >
                     <img 
-                      src="public/lovable-uploads/c895cf7a-7ddb-48bb-b486-b23a45695ae8.png" 
+                      src="moodboard/salle.png" 
                       alt="Salle enchantée avec éclairage violet" 
                       className="w-full h-auto object-contain rounded-lg"
                     />
@@ -214,7 +217,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/69b44875-693e-43a1-99ce-ccf49d61a9d1.png" 
+                    src="moodboard/deco_champi_2.jpg" 
                     alt="Décoration champignons enchantés" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -225,7 +228,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/8e217cb5-f738-4e28-a328-eabbe2a1a935.png" 
+                    src="moodboard/lanternes_2.jpg" 
                     alt="Lanternes décoratives" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -236,7 +239,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/94a9269d-8dc9-40a6-ab92-7e2174dbf110.png" 
+                    src="moodboard/table_arbre.png" 
                     alt="Tree centerpiece with purple lighting" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -248,7 +251,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/07f74139-8f46-4208-875c-09f1f450b449.png" 
+                    src="moodboard/cristaux_cheveux_2.jpg" 
                     alt="Accessoire de cheveux avec cristaux violets" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -259,7 +262,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/4447681c-986d-4452-b76b-8940e30e5a7b.png" 
+                    src="moodboard/cristaux_cheveux_22.jpg" 
                     alt="Accessoire de cheveux doré avec cristal" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -270,7 +273,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/f72be121-5d99-4436-a57c-f02d8ffebed8.png" 
+                    src="moodboard/cristaux_poche_2.jpg" 
                     alt="Cristaux décoratifs" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -282,7 +285,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/07201347-a492-4a91-8c53-3fc0aaa2810f.png" 
+                    src="moodboard/homme_costume_simple_2.jpg" 
                     alt="Boutonnière naturelle" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -293,7 +296,7 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/bee2b042-d6a6-43c2-bbd5-5365b6586b13.png" 
+                    src="moodboard/theme_2.jpg" 
                     alt="Décoration bois avec papillon doré" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
@@ -304,15 +307,13 @@ const Index = () => {
                   className="overflow-hidden rounded-lg shadow-md"
                 >
                   <img 
-                    src="public/lovable-uploads/ed28a03f-35c6-4b76-93ac-be758997957d.png" 
+                    src="moodboard/papiers.jpg" 
                     alt="Parchemins vintage" 
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </motion.div>
               </div>
-            </div>
-            
-            <p>Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes élégants, accessoires étoilés ou floraux… Exprimez votre éclat, sans crainte d'apporter une touche d'émerveillement à cette célébration !</p>
+            </div>          
           </div>
           <p className="text-wedding-purple font-bold">
             <span style={{ color: '#6E2D91' }}>✨</span> Élégance enchantée et féerie assumée, sans déguisement. <span style={{ color: '#6E2D91' }}>✨</span>
