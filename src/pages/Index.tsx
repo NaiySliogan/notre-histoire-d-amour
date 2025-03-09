@@ -189,10 +189,8 @@ const Index = () => {
           </h2>
           <div className="text-[#BE01AE] space-y-4 mb-8">
             <p>Plongez avec nous dans un univers enchanté, où la nature danse avec les étoiles. 🌿✨</p>
-            <p>Osez les couleurs vibrantes et les étoffes féeriques : des teintes de violet profond, de vert mystique et des touches de dorées scintillantes. Laissez-vous inspirer par les fleurs sauvages et les feuillages.
-Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes élégants, accessoires étoilés ou floraux… Exprimez votre éclat, sans crainte d'apporter une touche d'émerveillement à cette célébration !
-✨</p>
-<p>Simple élégance, magie enchantée ou féerie assumée, soyez qui vous voulez mais le blanc est déjà réservé ! ✨</p>
+            <p>Osez les couleurs vibrantes et les étoffes féeriques : des teintes de violet profond, de vert mystique et des touches de dorées scintillantes. Laissez-vous inspirer par les fleurs sauvages et les feuillages.</p>
+            <p>Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes élégants, accessoires étoilés ou floraux… Exprimez votre éclat, sans crainte d'apporter une touche d'émerveillement à cette célébration !</p>
 
             {/* Mood Board */}
             <div className="my-12 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-wedding-purple/20 shadow-lg">
@@ -316,7 +314,7 @@ Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes
             </div>          
           </div>
           <p className="text-wedding-purple font-bold">
-            <span style={{ color: '#6E2D91' }}>✨</span> Élégance enchantée et féerie assumée, sans déguisement. <span style={{ color: '#6E2D91' }}>✨</span>
+            <p>✨ Simple élégance, magie enchantée ou féerie assumée, soyez qui vous voulez mais le blanc est déjà réservé ! ✨</p>
           </p>
         </div>
       </section>
