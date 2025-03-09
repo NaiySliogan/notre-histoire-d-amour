@@ -190,14 +190,133 @@ const Index = () => {
           <div className="text-[#BE01AE] space-y-4 mb-8">
             <p>Plongez avec nous dans un univers enchanté, où la nature danse avec les étoiles. <span style={{ color: '#6E2D91' }}>🌿✨</span></p>
             <p>Osez les couleurs vibrantes et les étoffes féeriques : des teintes de violet profond, de vert mystique et des touches dorées scintillantes. Laissez-vous inspirer par les fleurs sauvages, les feuillages enchantés et la lumière des astres.</p>
+            
+            {/* Mood Board */}
+            <div className="my-12 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-wedding-purple/20 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Feature Image - Large and centered */}
+                <div className="col-span-1 md:col-span-3 mb-4">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="relative overflow-hidden rounded-lg shadow-xl"
+                  >
+                    <img 
+                      src="public/lovable-uploads/c895cf7a-7ddb-48bb-b486-b23a45695ae8.png" 
+                      alt="Salle enchantée avec éclairage violet" 
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </motion.div>
+                </div>
+                
+                {/* First row of 3 images */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/69b44875-693e-43a1-99ce-ccf49d61a9d1.png" 
+                    alt="Décoration champignons enchantés" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/8e217cb5-f738-4e28-a328-eabbe2a1a935.png" 
+                    alt="Lanternes décoratives" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/94a9269d-8dc9-40a6-ab92-7e2174dbf110.png" 
+                    alt="Tree centerpiece with purple lighting" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                {/* Second row of 3 images */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/07f74139-8f46-4208-875c-09f1f450b449.png" 
+                    alt="Accessoire de cheveux avec cristaux violets" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/4447681c-986d-4452-b76b-8940e30e5a7b.png" 
+                    alt="Accessoire de cheveux doré avec cristal" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/f72be121-5d99-4436-a57c-f02d8ffebed8.png" 
+                    alt="Cristaux décoratifs" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                {/* Third row of 3 images */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/07201347-a492-4a91-8c53-3fc0aaa2810f.png" 
+                    alt="Boutonnière naturelle" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/bee2b042-d6a6-43c2-bbd5-5365b6586b13.png" 
+                    alt="Décoration bois avec papillon doré" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
+                  <img 
+                    src="public/lovable-uploads/ed28a03f-35c6-4b76-93ac-be758997957d.png" 
+                    alt="Parchemins vintage" 
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </motion.div>
+              </div>
+            </div>
+            
             <p>Que vos tenues soient une ode à la magie de la nature : robes fluides, costumes élégants, accessoires étoilés ou floraux… Exprimez votre éclat, sans crainte d'apporter une touche d'émerveillement à cette célébration !</p>
           </div>
           <p className="text-wedding-purple font-bold">
             <span style={{ color: '#6E2D91' }}>✨</span> Élégance enchantée et féerie assumée, sans déguisement. <span style={{ color: '#6E2D91' }}>✨</span>
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-            {/* Ajoutez ici vos images d'inspiration */}
-          </div>
         </div>
       </section>
 
@@ -258,7 +377,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Accommodation Section avec les nouvelles informations */}
+      {/* Accommodation Section */}
       <section id="accommodation" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-center font-playfair mb-16">Votre Séjour</h2>
