@@ -194,130 +194,130 @@ const Index = () => {
 
             {/* Mood Board */}
             <div className="my-12 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-wedding-purple/20 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-2 gap-6 mb-6">
                 {/* Feature Image - Large and centered */}
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="overflow-hidden rounded-lg shadow-md">
+                    className="overflow-hidden rounded-lg shadow-md  max-h-[31rem]">
                     <img 
                       src="moodboard/salle.png" 
                       alt="Salle enchantée avec éclairage violet" 
-                      className="w-full h-[500px] object-cover rounded-lg"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   </motion.div>
 
                   <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md">
+                  className="overflow-hidden rounded-lg shadow-md  max-h-[31rem]">
                   <img 
                     src="moodboard/table_arbre.png" 
                     alt="Tree centerpiece with purple lighting" 
-                    className="w-full h-[500px] object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                   </motion.div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <div className="grid grid-cols-3 gap-6 mb-6">
                 
                 {/* First row of 3 images */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/deco_champi_2.jpg" 
                     alt="Décoration champignons enchantés" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/lanternes_2.jpg" 
                     alt="Lanternes décoratives" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/déco_table.jpg" 
                     alt="Décoration table" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 {/* Second row of 3 images */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/cristaux_cheveux_2.jpg" 
                     alt="Accessoire de cheveux avec cristaux violets" 
-                    className="w-full h-48 object-cover object-bottom rounded-lg"
+                    className="w-full h-full object-cover object-bottom rounded-lg"
                   />
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/cristaux_cheveux_22.jpg" 
                     alt="Accessoire de cheveux doré avec cristal" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/cristaux_poche_2.jpg" 
                     alt="Cristaux décoratifs" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 {/* Third row of 3 images */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/homme_costume_simple_2.jpg" 
                     alt="Boutonnière naturelle" 
-                    className="w-full h-48 object-cover object-[75%_25%] rounded-lg"
+                    className="w-full h-full object-cover object-[75%_25%] rounded-lg"
                   />
                 </motion.div>
                   
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/theme_2.jpg" 
                     alt="Décoration bois avec papillon doré" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="overflow-hidden rounded-lg shadow-md"
+                  className="overflow-hidden rounded-lg shadow-md max-h-48"
                 >
                   <img 
                     src="moodboard/papiers.jpg" 
                     alt="Parchemins vintage" 
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </motion.div>
               </div>
