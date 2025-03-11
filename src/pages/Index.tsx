@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
@@ -104,7 +105,11 @@ const Index = () => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfa3n8mV89eRFEX9XKDAhPDwDNdIvZK1ziLzSG7W1bCqRefOA/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50"
+                className="bg-wedding-purple text-white px-8 py-3 rounded-full text-lg inline-block transition-transform hover:scale-105 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-wedding-purple focus:ring-opacity-50 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://docs.google.com/forms/d/e/1FAIpQLSfa3n8mV89eRFEX9XKDAhPDwDNdIvZK1ziLzSG7W1bCqRefOA/viewform?usp=dialog", "_blank", "noopener,noreferrer");
+                }}
               >
                 Répondre
               </a>
